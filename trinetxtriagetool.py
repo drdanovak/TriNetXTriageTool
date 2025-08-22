@@ -475,9 +475,8 @@ if st.button("Generate Markdown Report"):
 
 reqs = "streamlit\npandas\n"
 
-Path("/mnt/data").mkdir(parents=True, exist_ok=True)
-(Path("/mnt/data/triage_strobe_app.py")).write_text(app_code, encoding="utf-8")
-(Path("/mnt/data/requirements.txt")).write_text(reqs, encoding="utf-8")
+md = make_report_md(state)
+st.download_button("⬇️ Download triage_report.md", md, file_name="triage_strobe_report.md")
 
 "/mnt/data/triage_strobe_app.py written, and /mnt/data/requirements.txt created."
 
