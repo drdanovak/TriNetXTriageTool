@@ -475,8 +475,4 @@ if st.button("Generate Markdown Report"):
 
 reqs = "streamlit\npandas\n"
 
-md = make_report_md(state)
-st.download_button("⬇️ Download triage_report.md", md, file_name="triage_strobe_report.md")
-
-"/mnt/data/triage_strobe_app.py written, and /mnt/data/requirements.txt created."
 
